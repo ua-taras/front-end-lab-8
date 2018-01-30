@@ -1,0 +1,143 @@
+@mixin brief-style ($float, $width, $margin, $box-sizing: content-box) {
+  float: $float;
+  width: $width;
+  margin: $margin;
+  box-sizing: $box-sizing;
+}
+
+body {
+  background-color: $color-background_body;
+  color: $color_font;
+}
+
+#content {
+  width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: $color-background_content;
+}
+
+h1,
+h2 {
+  color: $color_primary;
+}
+
+h1 {
+  margin-top: 8px;
+  text-align: center;
+  text-transform: $text-transform_heading;
+}
+
+p {
+  margin: 5px 0;
+
+  & + a {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+
+a {
+  color: $color_link;
+}
+
+img {
+  border: 2px solid $color_primary;
+  padding: 2px;
+}
+
+.img-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.img-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.brief {
+  @include brief-style($float:$brief_float,$width:$brief_width,$margin:$brief_margin, $box-sizing:$brief_box-sizing);
+  padding: 25px 20px;
+  color: $color_brief;
+  background-color: $color-background_brief;
+}
+
+caption {
+  text-align: right;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 60px;
+}
+
+th {
+  background-color: $color_table;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: normal;
+  padding: 10px 10px 10px 20px;
+
+  &:not(:last-child) {
+    border-right: 1px solid white;
+  }
+}
+
+td {
+  padding: 10px 10px 10px 20px;
+  border-bottom: 1px solid $color_table;
+  background-color: $color_cell;
+}
+
+form,
+label,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  margin: 10px 0 15px;
+  padding: 5px;
+}
+
+.name-field label,
+.name-field input {
+  float: left;
+  width: 49.7%;
+}
+
+label {
+  text-transform: uppercase;
+  color: $color_label;
+}
+
+label[for="label-surname"],
+#label-surname {
+  margin-left: 5px;
+}
+
+form > label {
+  display: inline-block;
+  width: 100%;
+}
+
+form > input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+}
+
+input[type="submit"] {
+  width: 240px;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: transparent;
+  border: 1px solid $color_link;
+  color: $color_link;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
