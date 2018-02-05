@@ -68,7 +68,7 @@ a {
 
 header {
   width: 100%;
-  height: 100vh;
+  min-height: 740px;
   background-image: url(../img/apples.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -151,6 +151,10 @@ header button {
   background: rgba(0, 0, 0, 0.5);
 }
 
+header button:hover {
+  background: rgba(0, 0, 0, 0);
+}
+
 .article-block {
   margin: 140px 0;
 }
@@ -171,14 +175,14 @@ strong {
 
 .text-block-item:last-child {
   padding-left: 2%;
-  font-size: 12px;
+  font-size: 14px;
   float: right;
   text-align: justify;
   text-justify: inter-word;
 }
 
 .featured-articles-block {
-  padding-bottom: 100px;
+  padding-bottom: 125px;
   background-color: #f3f3f3;
 }
 
@@ -189,18 +193,25 @@ strong {
 
 .image-block-item {
   float: left;
-  height: auto;
   padding: 15px;
   position: relative;
 }
 
+.row .image-block-item:first-child {
+  padding-left: 0;
+}
+
+.row .image-block-item:last-child {
+  padding-right: 0;
+}
+
 .image-block {
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 .image-block img {
   width: 100%;
-  height: 300px;
+  max-height: 295px;
   padding: 0;
 }
 
@@ -222,10 +233,8 @@ strong {
   border: 1px solid #ffffff;
 }
 
-.subscribe-title,
-.subscribe-form {
-  display: inline-block;
-  width: 45%;
+.featured-articles-block .button-like:hover {
+  background-color: #ffffff;
 }
 
 .subscribe-block {
@@ -234,31 +243,32 @@ strong {
 }
 
 .subscribe-title {
-  padding-left: 100px;
+  text-align: right;
+  padding: 7px 45px 7px 0;
+  font-size: 20px;
 }
 
 form input {
+  width: 60%;
   padding: 10px 15px;
   background: #f3f3f3;
-  width: 80%;
 }
 
-.form input::placeholder {
+.subscribe-block input::placeholder {
   color: #000;
 }
 
 form input,
 form button {
-  display: inline-block;
+  float: left;
   border: 1px solid #000;
   font-size: 14px;
 }
 
 form button {
-  position: relative;
   display: inline-block;
+  width: 25%;
   border: none;
-  left: -5px;
   padding: 11px 15px;
   background: #000;
   opacity: 0.8;
@@ -266,10 +276,84 @@ form button {
   cursor: pointer;
 }
 
-footer {
-  padding: 20px 0;
-  font-size: 12px;
+form button:hover {
+  background-color: #9e9e9e;
+  color: #000;
+}
+
+.contact-block {
+  margin: 100px 0;
+}
+
+.contact-block h3 {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.contact-block p,
+.contact-block q {
   color: #9e9e9e;
+  text-align: justify;
+  font-size: 14px;
+}
+
+.contact-details p,
+.contact-address p,
+.contact-news q,
+.contact-message p.time,
+.contact-news p {
+  line-height: 2;
+}
+
+.contact-message p.time {
+  display: block;
+  color: #e8e8e8;
+}
+
+.contact-details,
+.contact-address,
+.contact-message,
+.contact-news {
+  padding: 0 40px;
+}
+
+.contact-details {
+  padding-left: 0;
+}
+
+.contact-news {
+  padding-right: 0;
+}
+
+.contact-news .subscribe-form {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.contact-news form input {
+  width: 60%;
+  padding: 10px 15px;
+  background: #f3f3f3;
+  font-size: 14px;
+}
+
+.contact-news form input::placeholder {
+  color: #a4a4a4;
+  font-style: italic;
+}
+
+.contact-news form button {
+  width: 40%;
+  font-size: 14px;
+}
+
+footer {
+  padding: 30px 0;
+  font-size: 14px;
+  color: #9e9e9e;
+  border-top: 2px solid #f0f0f0;
 }
 
 footer p {
@@ -282,12 +366,21 @@ footer nav {
 
 footer nav li {
   display: inline-block;
-  margin: 0 30px;
+  margin: 0 5px;
+}
+
+footer nav li:last-child {
+  margin-right: 0;
 }
 
 footer nav a {
   display: inline-block;
-  padding: 0 5px 15px;
-  color: #9e9e9e;
+  padding-right: 15px;
+  color: #000;
+  font-weight: bold;
   border-bottom: 1px solid transparent;
+}
+
+footer nav a:hover {
+  color: #9e9e9e;
 }
