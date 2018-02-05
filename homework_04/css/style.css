@@ -235,6 +235,7 @@ strong {
 
 .featured-articles-block .button-like:hover {
   background-color: #ffffff;
+  color: red;
 }
 
 .subscribe-block {
