@@ -1,0 +1,321 @@
+html,
+body,
+div,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/1.2 Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+@media only screen and (max-width: 575px) {
+  h1 {
+    font-size: 1.143rem;
+    font-weight: bold;
+  }
+
+  h2,
+  p,
+  .footer-nav a {
+    font-size: 0.7143rem;
+  }
+
+  header .nav-bar {
+    flex-flow: column;
+    padding-top: 20px;
+  }
+
+  header .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  header .menu {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .banner {
+    min-height: 247px;
+  }
+
+  .banner h1 {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+  }
+
+  .menu ul {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu li {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #eeeeee;
+    border-top: 1px solid #cccccc;
+  }
+
+  .menu li:last-child {
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .news {
+    margin: 20px 20px 0;
+  }
+
+  .news-item {
+    width: 100%;
+  }
+
+  .news-item-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .footer-nav ul {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 900px) {
+  h1 {
+    font-size: 1.429rem;
+  }
+
+  h2,
+  p,
+  .footer-nav a {
+    font-size: 0.8571rem;
+  }
+
+  header .nav-bar {
+    flex-flow: column;
+    padding: 20px 0 15px;
+  }
+
+  header .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  header .menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .banner {
+    min-height: 531px;
+  }
+
+  .banner h1 {
+    display: flex;
+    margin: auto;
+    padding-top: 54px;
+    text-align: center;
+    width: 60%;
+  }
+
+  .news {
+    margin: 20px 20px 0;
+  }
+
+  .news-item {
+    width: 48.5%;
+  }
+
+  .news-item-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-grid {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .footer-nav ul {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  h1 {
+    font-size: 2.143rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  header .nav-bar {
+    padding: 20px 0 15px;
+  }
+
+  .menu ul {
+    justify-content: flex-start;
+    margin-left: 50px;
+  }
+
+  .banner {
+    background: url("../img/banner.jpg") center no-repeat;
+  }
+
+  .banner h1 {
+    padding-top: 58px;
+    width: 50%;
+  }
+
+  .news {
+    margin-top: 20px;
+  }
+
+  .news-item {
+    width: 32%;
+  }
+
+  .footer-grid {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+header .nav-bar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo img {
+  max-width: 150px;
+  width: 100%;
+}
+
+.menu {
+  padding-top: 14px;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+
+.menu a {
+  color: #000;
+  font-weight: bold;
+}
+
+.menu a:active,
+.menu a:hover {
+  color: #39c2d7;
+}
+
+.banner {
+  background: url("/img/banner.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.banner h1 {
+  color: #fff;
+}
+
+.news a {
+  color: #000;
+}
+
+.news-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.news-item {
+  margin-bottom: 20px;
+}
+
+.news-item img {
+  max-width: 253px;
+  width: 100%;
+}
+
+h2 {
+  margin: 5px 0;
+}
+
+figure {
+  height: 100%;
+  padding: 10px 10px 20px;
+  background-color: #cccccc;
+}
+
+figure:hover {
+  background-color: #39c2d7;
+}
+
+footer {
+  background-color: #39c2d7;
+  color: #fff;
+  padding: 20px 0;
+}
+
+footer p {
+  font-weight: bold;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-nav li {
+  margin-right: 20px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer-nav a:hover {
+  text-decoration: none;
+}
