@@ -13,20 +13,16 @@ else {
     if ((Math.pow(a,2) + Math.pow(b,2) == Math.pow(c,2)) ||
     (Math.pow(a,2) + Math.pow(c,2) == Math.pow(b,2)) ||
     (Math.pow(b,2) + Math.pow(c,2) == Math.pow(a,2))) {
-      // console.log('Type of triangle is right triangle');
       var triangle_type = 'Type of triangle is right triangle';
     }
     else if ((a == b) & (a == c)) {
-      // console.log('Type of triangle is equilateral');
       var triangle_type = 'Type of triangle is right equilateral';
     }
     else if ((a == b) || (a == c) || (b == c)) {
       var triangle_type = 'Type of triangle is right isosceles';
-      // console.log('Type of triangle is isosceles');
     }
     else if ((a!=b) & (a!=c) & (b!=c)) {
       var triangle_type = 'Type of triangle is right scalene';
-      // console.log('Type of triangle is scalene ');
     }
     var p = (a + b + c)/2;
     var s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
