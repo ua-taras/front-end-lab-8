@@ -16,13 +16,13 @@ else {
       var triangle_type = 'Type of triangle is right triangle';
     }
     else if ((a == b) & (a == c)) {
-      var triangle_type = 'Type of triangle is right equilateral';
+      var triangle_type = 'Type of triangle is equilateral';
     }
     else if ((a == b) || (a == c) || (b == c)) {
-      var triangle_type = 'Type of triangle is right isosceles';
+      var triangle_type = 'Type of triangle is isosceles';
     }
     else if ((a!=b) & (a!=c) & (b!=c)) {
-      var triangle_type = 'Type of triangle is right scalene';
+      var triangle_type = 'Type of triangle is scalene';
     }
     var p = (a + b + c)/2;
     var s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
