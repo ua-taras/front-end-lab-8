@@ -22,9 +22,9 @@ if (confirm('Do you want to play a game?')) {
       }
 
       var number_user = prompt(`Enter a number from 0 to: ${ range_end }
-        Attempts left: ${ attempt_total - attempt }
-        Total prize: ${ prize_total }
-        Possible prize on current attempt: ${ prize_current }`);
+Attempts left: ${ attempt_total - attempt }
+Total prize: ${ prize_total }
+Possible prize on current attempt: ${ prize_current }`);
 
       if (typeof(number_user) != 'object') {
         var number_random = Math.floor(Math.random() * (range_end + 1));
@@ -44,7 +44,7 @@ if (confirm('Do you want to play a game?')) {
         }
       }
 
-      if ((game_continue == false) || (attempt == (attempt_total - 1)) || (typeof(number_user) == 'object')) {
+      if ((!game_continue) || (attempt == (attempt_total - 1)) || (typeof(number_user) == 'object')) {
         console.log(`Thank you for a game. Your prize is: ${ prize_total }`);
         if (confirm('Do you want to play again?')) {
           win_rate = 1;
