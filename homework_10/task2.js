@@ -54,7 +54,7 @@ function fighter(obj) {
   }
 
   function fight(enemy) {
-    if (enemy.block) {
+    if (enemy.block()) {
       return false;
     }
     enemy.getStats().hp -= this.getStats().attack;
@@ -65,7 +65,7 @@ function fighter(obj) {
     return true;
   }
 
-  return { getName, getStats, getCombatHistory, fight };
+  return { getName, block, getStats, getCombatHistory, fight };
 }
 
 /**
