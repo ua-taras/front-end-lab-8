@@ -10,7 +10,7 @@ function treeView(structure) {
     console.log(structure[i].folder)
 
     if (structure[i].folder) {
-      li.innerHTML = `<p class="folder-item" onclick="elementView()">
+      li.innerHTML = `<p class="folder-item" onclick="elementView(event)">
   <i class="material-icons">folder</i>
   <span>${structure[i].title}</span>
 </p>`;
@@ -19,6 +19,7 @@ function treeView(structure) {
 
       if (structure[i].children) {
         let childElements = (treeView(structure[i].children));
+        childElements.style.display = 'none';
         li.appendChild(childElements);
       }
 
@@ -26,6 +27,7 @@ function treeView(structure) {
         let p = document.createElement("p");
         p.innerHTML = "folder is empty";
         p.className = "folder-empty";
+        p.style.display = 'none';
         li.appendChild(p);
       }
     }
@@ -41,6 +43,18 @@ function treeView(structure) {
     ul.appendChild(li);
   }
   return ul;
+}
+
+function elementView(event) {
+  let target = event.currentTarget;
+    if (target.nextSibling.style.display === "none") {
+      target.nextSibling.style.display = "block";
+      target.querySelector('i').innerHTML = "folder_open";
+    }
+    else {
+      target.nextSibling.style.display = "none";
+      target.querySelector('i').innerHTML = "folder";
+    }
 }
 
 rootNode.appendChild(treeView(structure));
